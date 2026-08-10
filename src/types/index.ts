@@ -3,6 +3,7 @@ export interface Artwork {
   slug: string;
   title: string;
   year?: number;
+  productionDate?: string;
   technique?: string;
   materials?: string;
   location?: string;
@@ -12,6 +13,8 @@ export interface Artwork {
     title?: string;
     artist?: string;
   };
+  inspirationText?: string;
+  frame?: string;
   description?: string;
   image: string;
   width: number;

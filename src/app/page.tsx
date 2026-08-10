@@ -55,7 +55,7 @@ export default function HomePage() {
 
         <section id="obras" className="section-shell section-block" aria-labelledby="works-title">
           <div className="section-heading">
-            <div><p className="eyebrow">Seleção · 2024</p><h2 id="works-title">Obras</h2></div>
+            <div><p className="eyebrow">Seleção · 2023—2025</p><h2 id="works-title">Obras</h2></div>
             <p>Colagem, pintura e matéria recuperada compõem um arquivo visual de lembranças, música e cotidiano.</p>
           </div>
           <div className="artwork-grid">
@@ -71,8 +71,8 @@ export default function HomePage() {
               <h2 id="poetics-title">A superfície como <em>memória viva.</em></h2>
             </div>
             <div className="poetics-copy">
-              <p className="lead">Casusa reúne lembranças, materiais, tempos e sensações em composições construídas por camadas, contrastes e gestos.</p>
-              <p>Papel, tecido, escrita e pigmento não são apenas suporte: guardam vestígios de histórias e transformam a superfície em presença. Entre abstração e figuração, as obras aproximam memória pessoal, imaginário popular e experiência cotidiana.</p>
+              <p className="lead">A imagem é investigada como território de experiência sensível e reflexão estética.</p>
+              <p>Memória, tempo e percepção visual revelam tensões entre forma, cor e matéria. Camadas, gestos e contrastes transformam a superfície em um campo de energia visual, situado entre abstração, expressão e experimentação.</p>
               <div className="poetics-index" aria-label="Elementos da poética">
                 {['Matéria', 'Memória', 'Música', 'Cotidiano'].map((item, index) => <p key={item}><span>0{index + 1}</span>{item}</p>)}
               </div>
@@ -104,7 +104,7 @@ export default function HomePage() {
               <p className="eyebrow">Sobre o artista</p>
               <h2 id="about-title">José Casusa de Oliveira Neto</h2>
               <p className="lead">Artista visual brasileiro, baseado em Maceió, Alagoas.</p>
-              <p>Seu trabalho nasce do encontro entre memória, tempo, percepção e matéria. A experiência cotidiana é reorganizada em imagens de forte presença física, onde pintura, escrita e materiais reutilizados convivem em tensão.</p>
+              <p>Sua produção investiga relações entre percepção, emoção e experiência estética contemporânea. Cor, textura e composição constroem superfícies que convidam à contemplação e à interpretação sensível, enquanto camadas, gestos e contrastes estruturam sua linguagem.</p>
               <div className="about-links">
                 <a className="text-link" href="/portfolio-casusa-oliveira.pdf" target="_blank">Abrir portfólio em PDF <span>↗</span></a>
                 <a className="text-link" href={siteConfig.instagram} target="_blank" rel="noreferrer">{siteConfig.instagramHandle} <span>↗</span></a>

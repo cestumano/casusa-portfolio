@@ -29,7 +29,7 @@ export default async function ArtworkPage({ params }: { params: Promise<{ slug: 
   const next = artworks[(index + 1) % artworks.length];
   const schema = {
     '@context': 'https://schema.org', '@type': 'VisualArtwork', name: artwork.title,
-    dateCreated: String(artwork.year), artMedium: artwork.technique, artform: 'Técnica mista',
+    dateCreated: artwork.productionDate ?? String(artwork.year), artMedium: artwork.technique, artform: 'Técnica mista',
     image: `${siteConfig.url}${artwork.image}`, creator: { '@type': 'Person', name: siteConfig.name },
   };
 
@@ -52,12 +52,14 @@ export default async function ArtworkPage({ params }: { params: Promise<{ slug: 
             <p>{artwork.description ?? 'A obra integra a pesquisa de Casusa Oliveira sobre memória, matéria, escrita e experiência cotidiana.'}</p>
           </div>
           <dl>
-            <div><dt>Ano</dt><dd>{artwork.year}</dd></div>
+            <div><dt>Data de produção</dt><dd>{artwork.productionDate ?? artwork.year}</dd></div>
             <div><dt>Técnica</dt><dd>{artwork.technique}</dd></div>
             {artwork.materials && <div><dt>Materiais</dt><dd>{artwork.materials}</dd></div>}
             {artwork.artworkDimensions && <div><dt>Dimensão</dt><dd>{artwork.artworkDimensions}</dd></div>}
             {artwork.totalDimensions && <div><dt>Dimensão total</dt><dd>{artwork.totalDimensions}</dd></div>}
             {artwork.inspiration && <div><dt>Inspiração musical</dt><dd><em>{artwork.inspiration.title}</em> · {artwork.inspiration.artist}</dd></div>}
+            {artwork.inspirationText && <div><dt>Inspiração</dt><dd>{artwork.inspirationText}</dd></div>}
+            {artwork.frame && <div><dt>Moldura</dt><dd>{artwork.frame}</dd></div>}
             <div><dt>Local</dt><dd>{artwork.location}</dd></div>
             <div><dt>Situação</dt><dd>{artwork.status ?? 'Sob consulta'}</dd></div>
           </dl>

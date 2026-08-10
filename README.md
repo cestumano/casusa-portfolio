@@ -2,6 +2,9 @@
 
 Portfólio editorial desenvolvido em Next.js. A versão oficial está em `src/app`.
 
+> As obras, imagens, textos e o código estão protegidos por direitos autorais.
+> Consulte [COPYRIGHT.md](COPYRIGHT.md) antes de reutilizar qualquer material.
+
 ## Visualização local
 
 ```bash
